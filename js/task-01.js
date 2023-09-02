@@ -1,19 +1,36 @@
-const allItems = document.querySelectorAll('.item');
-const allItemsQty = allItems.length;
+// const allItems = document.querySelectorAll('.item');
+// const allItemsQty = allItems.length;
 
-console.log(`Number of categories: ${allItemsQty} `);
+// console.log(`Number of categories: ${allItemsQty} `);
+
+// allItems.forEach((element) => {
+
+//     let elementTitle = element.querySelector('h2').textContent;
+    
+//     let elementItems = element.querySelectorAll('li').length;
+    
+//       console.log(`Category: ${elementTitle}`);
+//       console.log(`Elements: ${elementItems}`);
+    
+//     });
+    
+const categories = document.querySelector('#categories');
+const categoriesQty = categories.children.length;
+
+  console.log(`Number of categories: ${categoriesQty} `);
+
+const allItems = document.querySelectorAll('.item');
 
 allItems.forEach((element) => {
 
-    let elementTitle = element.querySelector('h2').textContent;
+    let elementTitle = element.firstElementChild.textContent;
     
-    let elementItems = element.querySelectorAll('li').length;
+    let elementItems = element.lastElementChild.children.length;
     
       console.log(`Category: ${elementTitle}`);
       console.log(`Elements: ${elementItems}`);
     
     });
-    
     
 //     Напиши скрипт, який:
 
